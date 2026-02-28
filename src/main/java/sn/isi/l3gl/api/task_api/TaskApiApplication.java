@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication(scanBasePackages = {"sn.isi.l3gl.api", "sn.isi.l3gl.core"})
 @EnableJpaRepositories(basePackages = "sn.isi.l3gl.core.task_core.repository")
-@EntityScan(basePackages = "sn.isi.l3gl.core.entities")
+@EntityScan(basePackages = "sn.isi.l3gl.core.task_core.entite")
 public class TaskApiApplication {
     public static void main(String[] args) {
         SpringApplication.run(TaskApiApplication.class, args);
