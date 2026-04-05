@@ -1,0 +1,13 @@
+global:
+  scrape_interval: 10s  # Respect de la consigne (10 secondes)
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  # C'est ici que tu configures ton API
+  - job_name: 'task-api'
+    metrics_path: '/actuator/prometheus' # Consigne respectée
+    static_configs:
+      - targets: ['192.168.80.129:8085'] # L'IP de ta VM API (VM1) sur le port 8085
