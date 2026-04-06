@@ -4,7 +4,7 @@ metadata:
   name: app-config
   namespace: devops-l3gl
 data:
-  # L'hôte est 'mysql' car c'est le nom de ton Service Kubernetes
+  # L'hôte est 'mysql' car c'est le nom de mon Service Kubernetes
   SPRING_DATASOURCE_URL: "jdbc:mysql://mysql:3306/l3gl_db?createDatabaseIfNotExist=true"
   SPRING_DATASOURCE_USERNAME: "root"
 ---
@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
         - name: task-api
-          image: ndourmouhammad/task-api:latest # <--- TON IMAGE DOCKER HUB
+          image: ndourmouhammad/task-api:latest
           resources:
             requests:
               cpu: "200m"
